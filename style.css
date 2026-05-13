@@ -1,48 +1,49 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: white;
-    color: black;
-    margin: 0;
-    padding: 0;
-}
-
 header {
     text-align: center;
-    padding: 40px;
-    border-bottom: 1px solid #cccccc;
+    padding: 30px;
+    border-bottom: 2px solid #ccc;
+
+    animation: fadeIn 2s;
 }
 
-section {
-    width: 80%;
-    margin: 30px auto;
-}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
 
-h1, h2 {
-    color: black;
-}
-
-.box {
-    border: 1px solid #cccccc;
-    padding: 20px;
-    margin-top: 15px;
-}
-
-ul {
-    padding-left: 20px;
+    to {
+        opacity: 1;
+    }
 }
 
 a {
     color: black;
     text-decoration: none;
+
+    transition: 0.3s;
 }
 
 a:hover {
-    text-decoration: underline;
+    color: gray;
+
+    letter-spacing: 1px;
 }
 
-footer {
-    text-align: center;
-    padding: 20px;
-    border-top: 1px solid #cccccc;
-    margin-top: 40px;
+section {
+    width: 80%;
+    margin: 30px auto;
+
+    animation: slideUp 1s;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
